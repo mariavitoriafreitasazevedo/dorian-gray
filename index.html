@@ -6,43 +6,46 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    <title>Dorian gray</title> 
-    <p>Maria Heloisa Pereira Vaz</p>
-    <p>Maria Vitoria Freitas Azevedo</p>
-    <p>Emanuelli Conceição Felizari</p>
-    <p>Izabelly Caroliny Sales Aguiar</p>
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>O Retrato de Dorian Gray</title> 
 </head>
 <body>
+    <header>
+        <p>Maria Heloisa Pereira Vaz</p>
+        <p>Maria Vitoria Freitas Azevedo</p>
+        <p>Emanuelli Conceição Felizari</p>
+        <p>Izabelly Caroliny Sales Aguiar</p>
+    </header>
+
     <main>
         <div class="passo ativo" id="passo-0">
-            <img src="img1.png" alt="">
-            <p>Um dia, interessei-me pela obra "O retrato de Dorian Gray" de Augusto Cury com diversas reflexões sobre a mente humana em relação a gestão emocional 
-                e a inteligência multifocal, e resolvi capturar algumas essências dessa obra.</p>
+            <img src="img1.png" alt="Capa do livro">
+            <p>Um dia, interessei-me pela obra "O Retrato de Dorian Gray" de Oscar Wilde, cheia de reflexões sobre a mente humana e as consequências de nossas escolhas. Resolvi capturar algumas essências dessa obra.</p>
             <button class="btn-proximo" data-proximo="1">Perguntas</button>
             <button class="btn-proximo" data-proximo="2">Respostas</button>
         </div>
+
         <div class="passo" id="passo-1">
             <p>1. Quem é Dorian Gray e qual é seu papel na história?</p>
             <button class="btn-proximo" data-proximo="2">Seguir para a próxima pergunta.</button>
             <button class="btn-proximo" data-proximo="6">2. O que o retrato de Dorian representa simbolicamente?</button>
         </div>
+
         <div class="passo" id="passo-2">
             <p>3. Qual é a crítica social presente no livro?</p>
             <button class="btn-proximo" data-proximo="3">4. Como termina o romance?</button>
-           
         </div>
+
         <div class="passo" id="passo-3">
             <p>4. Qual é a principal mensagem de "O Retrato de Dorian Gray"?</p>
             <button class="btn-proximo" data-proximo="4">Seguir em frente</button>
         </div>
 
         <div class="passo" id="passo-4">
-            <img src="obra.jpg">
+            <img src="obra.jpg" alt="Obra de arte">
             <p>Você decide continuar lendo Perguntas, ou Respostas?</p>
             <button class="btn-proximo" data-proximo="5">Perguntas</button>
             <button class="btn-proximo" data-proximo="1">Respostas</button>
-
         </div>
 
         <div class="passo" id="passo-5">
@@ -51,10 +54,10 @@
             <button class="btn-proximo" data-proximo="6">Saber sobre o tema Respostas</button>
         </div>
 
-         <div class="passo" id="passo-6">
+        <div class="passo" id="passo-6">
             <p>2. O retrato representa a alma de Dorian. Enquanto ele mantém sua aparência jovem e perfeita, o quadro revela os efeitos de sua degradação moral e espiritual. É uma metáfora poderosa para a dualidade entre aparência e realidade, e para as consequências dos atos imorais ocultos.</p>
             <button class="btn-proximo" data-proximo="2">Seguir os conceitos de resposta</button>
-            <button class="btn-proximo" data-proximo="7">ver Perguntas</button>
+            <button class="btn-proximo" data-proximo="7">Ver Perguntas</button>
         </div>
 
         <div class="passo" id="passo-7">
@@ -62,11 +65,20 @@
             <button class="btn-proximo" data-proximo="4">Ver obra</button>
             <button class="btn-proximo" data-proximo="0">Voltar ao início</button>
         </div>
-
-
-
-
     </main>
-    <script src="script.js"></script>
+
+    <script>
+        const botoes = document.querySelectorAll(".btn-proximo");
+        const passos = document.querySelectorAll(".passo");
+
+        botoes.forEach(botao => {
+            botao.addEventListener("click", () => {
+                const proximo = botao.getAttribute("data-proximo");
+                passos.forEach(p => p.classList.remove("ativo"));
+                document.getElementById(`passo-${proximo}`).classList.add("ativo");
+            });
+        });
+    </script>
 </body>
 </html>
+
