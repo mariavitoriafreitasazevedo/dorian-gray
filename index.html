@@ -6,7 +6,6 @@
   <title>O Retrato de Dorian Gray</title>
   <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
-    /* Fonte padrão */
     body {
         font-family: 'Bai Jamjuree', sans-serif;
         margin: 0;
@@ -16,7 +15,6 @@
         text-align: center;
     }
 
-    /* Cabeçalho */
     header {
         background: #333;
         color: white;
@@ -24,9 +22,8 @@
         font-size: 14px;
     }
 
-    /* Cada passo */
     .passo {
-        display: none; /* esconde todos por padrão */
+        display: none;
         padding: 20px;
         max-width: 700px;
         margin: 20px auto;
@@ -37,13 +34,11 @@
         opacity: 0;
     }
 
-    /* Só o passo ativo aparece */
     .passo.ativo {
         display: block;
         opacity: 1;
     }
 
-    /* Botões */
     button {
         margin: 10px;
         padding: 10px 20px;
@@ -60,7 +55,6 @@
         background: #45a049;
     }
 
-    /* Imagens */
     img {
         max-width: 100%;
         border-radius: 10px;
@@ -76,52 +70,55 @@
   </header>
 
   <main>
+    <!-- INTRO -->
     <div class="passo ativo" id="passo-0">
       <img src="img1.png" alt="Capa do livro">
       <p>Um dia, interessei-me pela obra "O Retrato de Dorian Gray" de Oscar Wilde, cheia de reflexões sobre a mente humana e as consequências de nossas escolhas. Resolvi capturar algumas essências dessa obra.</p>
       <button class="btn-proximo" data-proximo="1">Perguntas</button>
-      <button class="btn-proximo" data-proximo="2">Respostas</button>
+      <button class="btn-proximo" data-proximo="5">Respostas</button>
     </div>
 
+    <!-- PERGUNTAS -->
     <div class="passo" id="passo-1">
       <p>1. Quem é Dorian Gray e qual é seu papel na história?</p>
-      <button class="btn-proximo" data-proximo="2">Seguir para a próxima pergunta.</button>
-      <button class="btn-proximo" data-proximo="6">2. O que o retrato de Dorian representa simbolicamente?</button>
+      <button class="btn-proximo" data-proximo="2">Próxima Pergunta</button>
+      <button class="btn-proximo" data-proximo="5">Ver Resposta</button>
     </div>
 
     <div class="passo" id="passo-2">
-      <p>3. Qual é a crítica social presente no livro?</p>
-      <button class="btn-proximo" data-proximo="3">4. Como termina o romance?</button>
+      <p>2. O que o retrato de Dorian representa simbolicamente?</p>
+      <button class="btn-proximo" data-proximo="3">Próxima Pergunta</button>
+      <button class="btn-proximo" data-proximo="6">Ver Resposta</button>
     </div>
 
     <div class="passo" id="passo-3">
-      <p>4. Qual é a principal mensagem de "O Retrato de Dorian Gray"?</p>
-      <button class="btn-proximo" data-proximo="4">Seguir em frente</button>
+      <p>3. Qual é a crítica social presente no livro?</p>
+      <button class="btn-proximo" data-proximo="4">Ver Obra</button>
+      <button class="btn-proximo" data-proximo="7">Ver Resposta</button>
     </div>
 
+    <!-- OBRA -->
     <div class="passo" id="passo-4">
       <img src="obra.jpg" alt="Obra de arte">
       <p>Você decide continuar lendo Perguntas, ou Respostas?</p>
-      <button class="btn-proximo" data-proximo="5">Perguntas</button>
-      <button class="btn-proximo" data-proximo="1">Respostas</button>
+      <button class="btn-proximo" data-proximo="1">Perguntas</button>
+      <button class="btn-proximo" data-proximo="5">Respostas</button>
     </div>
 
+    <!-- RESPOSTAS -->
     <div class="passo" id="passo-5">
       <p>1. Dorian Gray é o protagonista do romance. Jovem belo e inocente no início da história, ele deseja permanecer eternamente jovem após ver seu retrato pintado por Basil Hallward. Seu desejo se realiza de forma sobrenatural: ele mantém a juventude, enquanto o retrato envelhece e reflete os efeitos de seus atos imorais.</p>
-      <button class="btn-proximo" data-proximo="0">Retornar ao início</button>
-      <button class="btn-proximo" data-proximo="6">Saber sobre o tema Respostas</button>
+      <button class="btn-proximo" data-proximo="0">Voltar ao Início</button>
     </div>
 
     <div class="passo" id="passo-6">
       <p>2. O retrato representa a alma de Dorian. Enquanto ele mantém sua aparência jovem e perfeita, o quadro revela os efeitos de sua degradação moral e espiritual. É uma metáfora poderosa para a dualidade entre aparência e realidade, e para as consequências dos atos imorais ocultos.</p>
-      <button class="btn-proximo" data-proximo="2">Seguir os conceitos de resposta</button>
-      <button class="btn-proximo" data-proximo="7">Ver Perguntas</button>
+      <button class="btn-proximo" data-proximo="0">Voltar ao Início</button>
     </div>
 
     <div class="passo" id="passo-7">
       <p>3. Oscar Wilde critica a superficialidade da sociedade vitoriana, obcecada por aparência e reputação, e questiona os padrões morais da época. O livro também faz críticas ao culto da juventude e à busca desenfreada por prazer.</p>  
-      <button class="btn-proximo" data-proximo="4">Ver obra</button>
-      <button class="btn-proximo" data-proximo="0">Voltar ao início</button>
+      <button class="btn-proximo" data-proximo="0">Voltar ao Início</button>
     </div>
   </main>
 
