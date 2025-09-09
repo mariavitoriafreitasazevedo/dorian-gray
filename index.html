@@ -16,7 +16,7 @@
   </header>
 
   <main>
-    <!-- Início -->
+
     <div class="passo ativo" id="passo-0" aria-hidden="false">
       <img src="img1.png" alt="Capa do livro O Retrato de Dorian Gray" onerror="this.style.display='none'"/>
       <p>Bem-vindo ao resumo interativo de <strong>O Retrato de Dorian Gray</strong>.</p>
@@ -25,7 +25,7 @@
       <button data-proximo="9">Obra</button>
     </div>
 
-    <!-- Perguntas (1–4) -->
+
     <div class="passo" id="passo-1" aria-hidden="true">
       <p>1. Quem é Dorian Gray e qual é seu papel na história?</p>
       <button data-proximo="2">Próxima pergunta</button>
@@ -50,7 +50,7 @@
       <button data-proximo="0">Início</button>
     </div>
 
-    <!-- Respostas (5–8) -->
+
     <div class="passo" id="passo-5" aria-hidden="true">
       <p>Resposta 1: Dorian Gray é o protagonista. Jovem, belo e inocente no início, deseja permanecer eternamente jovem; enquanto ele não envelhece, o retrato revela sua corrupção.</p>
       <button data-proximo="0">Início</button>
@@ -71,7 +71,7 @@
       <button data-proximo="0">Início</button>
     </div>
 
-    <!-- Obra (imagem) -->
+ 
     <div class="passo" id="passo-9" aria-hidden="true">
       <img src="obra.jpg" alt="Obra relacionada a O Retrato de Dorian Gray" onerror="this.style.display='none'"/>
       <p>Você decide continuar lendo perguntas ou respostas?</p>
@@ -82,7 +82,7 @@
   </main>
 
   <script>
-    // Delegação de eventos: funciona para qualquer botão com data-proximo
+ 
     document.addEventListener("click", (e) => {
       const botao = e.target.closest("button[data-proximo]");
       if (!botao) return;
