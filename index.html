@@ -3,43 +3,51 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>O Retrato de Dorian Gray — Perguntas & Respostas</title>
+  <title>O Retrato de Dorian Gray</title>
   <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@300;400;600&display=swap" rel="stylesheet" />
   <style>
-    :root { --bg:#f8f8f8; --ink:#222; --card:#fff; --brand:#4CAF50; --brand-2:#45a049; }
-    * { box-sizing: border-box; }
     body {
-      font-family: 'Bai Jamjuree', sans-serif; margin:0; background:var(--bg); color:var(--ink);
-      display:flex; flex-direction:column; min-height:100dvh; text-align:center;
+      font-family: 'Bai Jamjuree', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f8f8f8;
+      color: #222;
+      text-align: center;
     }
-    header { background:#333; color:#fff; padding:10px 12px; font-size:14px; }
-    header p { margin:.2rem 0; }
-
-    main { flex:1; padding: 20px 12px 40px; }
+    header {
+      background: #333;
+      color: #fff;
+      padding: 10px;
+    }
     .passo {
-      display:none; opacity:0; transition:opacity .25s ease;
-      max-width: 820px; margin: 0 auto; background:var(--card); padding:22px; border-radius:14px;
-      box-shadow: 0 6px 22px rgba(0,0,0,.08);
+      display: none;
+      max-width: 700px;
+      margin: 20px auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
-    .passo.ativo { display:block; opacity:1; }
-    .titulo { font-weight:600; font-size:20px; margin:0 0 8px; }
-    .lead { margin: 6px 0 18px; }
-
-    .acoes { margin-top: 14px; display:flex; flex-wrap: wrap; gap:10px; justify-content:center; }
+    .passo.ativo {
+      display: block;
+    }
     button {
-      appearance:none; border:0; border-radius:10px; padding:10px 18px; cursor:pointer;
-      background:var(--brand); color:#fff; font-size:16px; line-height:1; font-weight:600;
-      box-shadow: 0 2px 8px rgba(76,175,80,.35);
+      margin: 5px;
+      padding: 10px 20px;
+      background: #4CAF50;
+      border: none;
+      border-radius: 6px;
+      color: #fff;
+      cursor: pointer;
     }
-    button:hover { background:var(--brand-2); }
-    button:focus { outline: 3px solid #9ad4a0; outline-offset:2px; }
-
-    img { max-width:100%; border-radius:12px; display:block; margin:0 auto 12px; height:auto; }
-    figure { margin:0; }
-    figcaption { font-size:12px; color:#555; margin-top:6px; }
-
-    /* Acessibilidade: esconder somente visualmente quando inativo */
-    .passo[aria-hidden="true"] { visibility:hidden; }
+    button:hover {
+      background: #45a049;
+    }
+    img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin: 15px 0;
+    }
   </style>
 </head>
 <body>
@@ -51,147 +59,76 @@
   </header>
 
   <main>
-    <!-- INTRO -->
-    <section class="passo ativo" id="passo-0" aria-hidden="false">
-      <figure>
-        <img src="img1.png" alt="Imagem de abertura relacionada ao livro O Retrato de Dorian Gray" onerror="this.style.display='none'" />
-      </figure>
-      <p class="lead">Interessei-me por <strong>O Retrato de Dorian Gray</strong>, de <strong>Oscar Wilde</strong>, e reuni perguntas e respostas para explorar seus principais temas.</p>
-      <div class="acoes">
-        <button class="btn-proximo" data-proximo="1">Ver Perguntas</button>
-        <button class="btn-proximo" data-proximo="5">Ver Respostas</button>
-        <button class="btn-proximo" data-proximo="9" title="Ver imagem da obra">Ver Obra</button>
-      </div>
-    </section>
+    <div class="passo ativo" id="passo-0">
+      <img src="img1.png" alt="Capa do livro O Retrato de Dorian Gray">
+      <p>Bem-vindo ao resumo interativo de <strong>O Retrato de Dorian Gray</strong>.</p>
+      <button class="btn-proximo" data-proximo="1">Perguntas</button>
+      <button class="btn-proximo" data-proximo="5">Respostas</button>
+    </div>
 
-    <!-- PERGUNTAS (1–4) -->
-    <section class="passo" id="passo-1" aria-hidden="true">
-      <p class="titulo">Pergunta 1</p>
-      <p>Quem é Dorian Gray e qual é seu papel na história?</p>
-      <div class="acoes">
-        <button class="btn-proximo" data-proximo="2">Próxima Pergunta</button>
-        <button class="btn-proximo" data-proximo="5">Ver Resposta 1</button>
-        <button class="btn-proximo" data-proximo="0">Início</button>
-      </div>
-    </section>
+    <div class="passo" id="passo-1">
+      <p>1. Quem é Dorian Gray e qual é seu papel na história?</p>
+      <img src="obra.jpg" alt="Dorian Gray retrato">
+      <button class="btn-proximo" data-proximo="2">Próxima Pergunta</button>
+      <button class="btn-proximo" data-proximo="5">Ver Resposta</button>
+    </div>
 
-    <section class="passo" id="passo-2" aria-hidden="true">
-      <p class="titulo">Pergunta 2</p>
-      <p>O que o retrato de Dorian representa simbolicamente?</p>
-      <div class="acoes">
-        <button class="btn-proximo" data-proximo="3">Próxima Pergunta</button>
-        <button class="btn-proximo" data-proximo="6">Ver Resposta 2</button>
-        <button class="btn-proximo" data-proximo="1">Pergunta Anterior</button>
-      </div>
-    </section>
+    <div class="passo" id="passo-2">
+      <p>2. O que o retrato de Dorian representa simbolicamente?</p>
+      <img src="obra.jpg" alt="O retrato de Dorian">
+      <button class="btn-proximo" data-proximo="3">Próxima Pergunta</button>
+      <button class="btn-proximo" data-proximo="6">Ver Resposta</button>
+    </div>
 
-    <section class="passo" id="passo-3" aria-hidden="true">
-      <p class="titulo">Pergunta 3</p>
-      <p>Qual é a crítica social presente no livro?</p>
-      <div class="acoes">
-        <button class="btn-proximo" data-proximo="4">Próxima Pergunta</button>
-        <button class="btn-proximo" data-proximo="7">Ver Resposta 3</button>
-        <button class="btn-proximo" data-proximo="2">Pergunta Anterior</button>
-      </div>
-    </section>
+    <div class="passo" id="passo-3">
+      <p>3. Qual é a crítica social presente no livro?</p>
+      <img src="obra.jpg" alt="Crítica social">
+      <button class="btn-proximo" data-proximo="4">Próxima Pergunta</button>
+      <button class="btn-proximo" data-proximo="7">Ver Resposta</button>
+    </div>
 
-    <section class="passo" id="passo-4" aria-hidden="true">
-      <p class="titulo">Pergunta 4</p>
-      <p>Como termina o romance?</p>
-      <div class="acoes">
-        <button class="btn-proximo" data-proximo="8">Ver Resposta 4</button>
-        <button class="btn-proximo" data-proximo="3">Pergunta Anterior</button>
-        <button class="btn-proximo" data-proximo="9">Ver Obra</button>
-      </div>
-    </section>
+    <div class="passo" id="passo-4">
+      <p>4. Como termina o romance?</p>
+      <img src="obra.jpg" alt="Fim da obra">
+      <button class="btn-proximo" data-proximo="8">Ver Resposta</button>
+      <button class="btn-proximo" data-proximo="0">Início</button>
+    </div>
 
-    <!-- RESPOSTAS (5–8) -->
-    <section class="passo" id="passo-5" aria-hidden="true">
-      <p class="titulo">Resposta 1</p>
-      <p>Dorian Gray é o protagonista. Jovem, belo e inicialmente inocente, deseja permanecer eternamente jovem após ver seu retrato pintado por Basil Hallward. O desejo se cumpre de modo sobrenatural: Dorian mantém a juventude, enquanto o retrato envelhece e registra as marcas de seus atos imorais.</p>
-      <div class="acoes">
-        <button class="btn-proximo" data-proximo="6">Próxima Resposta</button>
-        <button class="btn-proximo" data-proximo="1">Voltar às Perguntas</button>
-        <button class="btn-proximo" data-proximo="0">Início</button>
-      </div>
-    </section>
+    <div class="passo" id="passo-5">
+      <p>Resposta 1: Dorian Gray é o protagonista. Jovem, belo e inicialmente inocente, deseja permanecer eternamente jovem após ver seu retrato pintado por Basil Hallward. Seu desejo se cumpre de modo sobrenatural: ele mantém a juventude, enquanto o retrato envelhece e mostra sua corrupção.</p>
+      <img src="img1.png" alt="Dorian jovem">
+      <button class="btn-proximo" data-proximo="0">Início</button>
+    </div>
 
-    <section class="passo" id="passo-6" aria-hidden="true">
-      <p class="titulo">Resposta 2</p>
-      <p>O retrato funciona como metáfora da alma de Dorian. Enquanto ele preserva a aparência perfeita, o quadro expõe sua degradação moral e espiritual, evidenciando a dualidade entre aparência e realidade e as consequências ocultas de suas escolhas.</p>
-      <div class="acoes">
-        <button class="btn-proximo" data-proximo="7">Próxima Resposta</button>
-        <button class="btn-proximo" data-proximo="2">Ver Pergunta 2</button>
-      </div>
-    </section>
+    <div class="passo" id="passo-6">
+      <p>Resposta 2: O retrato representa a alma de Dorian. Enquanto ele mantém a beleza exterior, o quadro revela sua degradação moral e espiritual.</p>
+      <img src="obra.jpg" alt="O retrato envelhecido">
+      <button class="btn-proximo" data-proximo="0">Início</button>
+    </div>
 
-    <section class="passo" id="passo-7" aria-hidden="true">
-      <p class="titulo">Resposta 3</p>
-      <p>Wilde critica a superficialidade e o esteticismo levados ao extremo na sociedade vitoriana — o culto à juventude, à aparência e ao prazer imediato — e questiona padrões morais baseados em reputação e conveniência social.</p>
-      <div class="acoes">
-        <button class="btn-proximo" data-proximo="8">Próxima Resposta</button>
-        <button class="btn-proximo" data-proximo="3">Ver Pergunta 3</button>
-      </div>
-    </section>
+    <div class="passo" id="passo-7">
+      <p>Resposta 3: Oscar Wilde critica a superficialidade da sociedade vitoriana, o culto à juventude, à beleza e ao prazer imediato.</p>
+      <img src="obra.jpg" alt="Sociedade vitoriana">
+      <button class="btn-proximo" data-proximo="0">Início</button>
+    </div>
 
-    <section class="passo" id="passo-8" aria-hidden="true">
-      <p class="titulo">Resposta 4</p>
-      <p>No clímax, Dorian tenta destruir o retrato — a fonte de sua consciência — apunhalando-o. Ele cai morto, agora velho e desfigurado, enquanto o quadro recupera a beleza original, revelando a verdade sobre sua vida.</p>
-      <div class="acoes">
-        <button class="btn-proximo" data-proximo="0">Início</button>
-        <button class="btn-proximo" data-proximo="4">Ver Pergunta 4</button>
-      </div>
-    </section>
-
-    <!-- OBRA -->
-    <section class="passo" id="passo-9" aria-hidden="true">
-      <figure>
-        <img src="obra.jpg" alt="Imagem ilustrativa da obra O Retrato de Dorian Gray" onerror="this.style.display='none'" />
-        <figcaption>Ilustração/obra relacionada ao romance.</figcaption>
-      </figure>
-      <p class="lead">Escolha continuar pelas Perguntas ou ir direto às Respostas.</p>
-      <div class="acoes">
-        <button class="btn-proximo" data-proximo="1">Perguntas</button>
-        <button class="btn-proximo" data-proximo="5">Respostas</button>
-        <button class="btn-proximo" data-proximo="0">Início</button>
-      </div>
-    </section>
+    <div class="passo" id="passo-8">
+      <p>Resposta 4: No final, Dorian tenta destruir o retrato, mas acaba morrendo. Seu corpo envelhece e o quadro volta à sua beleza original.</p>
+      <img src="obra.jpg" alt="Cena final de Dorian Gray">
+      <button class="btn-proximo" data-proximo="0">Início</button>
+    </div>
   </main>
 
   <script>
-    function mostrarPasso(id) {
-      const alvo = document.getElementById(`passo-${id}`);
-      const passos = document.querySelectorAll('.passo');
-      passos.forEach(sec => {
-        const ativo = sec === alvo;
-        sec.classList.toggle('ativo', ativo);
-        sec.setAttribute('aria-hidden', ativo ? 'false' : 'true');
+    const botoes = document.querySelectorAll(".btn-proximo");
+    const passos = document.querySelectorAll(".passo");
+
+    botoes.forEach(botao => {
+      botao.addEventListener("click", () => {
+        const proximo = botao.getAttribute("data-proximo");
+        passos.forEach(p => p.classList.remove("ativo"));
+        document.getElementById(`passo-${proximo}`).classList.add("ativo");
       });
-      // rolar para topo do main após troca
-      document.querySelector('main').scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    // Delegação de eventos: funciona mesmo que você adicione mais botões no HTML
-    document.addEventListener('click', (ev) => {
-      const btn = ev.target.closest('.btn-proximo');
-      if (!btn) return;
-      const prox = btn.getAttribute('data-proximo');
-      if (!prox) return;
-      const existe = document.getElementById(`passo-${prox}`);
-      if (!existe) {
-        console.warn(`Destino passo-${prox} não encontrado.`);
-        return;
-      }
-      mostrarPasso(prox);
-    });
-
-    // Garantia: se alguém abrir com hash #passo-3, vamos abrir o correto
-    window.addEventListener('load', () => {
-      const hash = location.hash.replace('#', '');
-      if (hash && document.getElementById(hash)) {
-        const id = hash.split('-')[1];
-        mostrarPasso(id);
-      }
     });
   </script>
 </body>
